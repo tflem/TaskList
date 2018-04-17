@@ -53,7 +53,7 @@ namespace TaskList.Pages.Tasks
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TaskExists(Task.ID))
+                if (!_context.Task.Any(e => e.ID == Task.ID))
                 {
                     return NotFound();
                 }
