@@ -20,9 +20,16 @@ namespace TaskList.Pages.Tasks
 
         public IList<TaskList.Models.Task> Task { get;set; }
 
-        public async System.Threading.Tasks.Task OnGetAsync()
+        public async System.Threading.Tasks.Task OnGetAsync(string searchString)
         {
-            Task = await _context.Task.ToListAsync();
-        }
+            var tasks = from t in _context.Task
+                        select t;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                tasks = tasks.Where(s => s.TaskDescription.Contains(searchString));              
+            }
+
+            Task = await tasks.ToListAsync();
+        }       
     }
 }
