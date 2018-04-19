@@ -23,6 +23,11 @@
                 <span asp-validation-for="Task.DueDate" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Task.Priority" class="control-label">Task Priority</label>
+                <input asp-for="Task.Priority" class="form-control" />
+                <span asp-validation-for="Task.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
