@@ -10,6 +10,7 @@ namespace TaskList.Models
 
         [Display(Name = "Due Date")]
         [DataType(DataType.Date)]
-        public DateTime DueDate { get; set; }        
+        public DateTime DueDate { get; set; }    
+        public string Priority { get; set; }    
     }
 }
