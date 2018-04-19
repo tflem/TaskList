@@ -11,9 +11,10 @@ using TaskList.Models;
 namespace TaskList.Migrations
 {
     [DbContext(typeof(TaskContext))]
-    partial class TaskContextModelSnapshot : ModelSnapshot
+    [Migration("20180419143258_Priority")]
+    partial class Priority
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
