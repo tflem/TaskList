@@ -21,25 +21,29 @@ namespace TaskList.Models
                        new Task
                        {
                            TaskDescription = "Complete Taxes",
-                           DueDate = DateTime.Parse("2018-04-30")
+                           DueDate = DateTime.Parse("2018-04-30"),
+                           Priority = "Not Critical"
                        },
 
                        new Task
                        {
                            TaskDescription = "Pay the Power Bill",
-                           DueDate = DateTime.Parse("2018-04-13")
+                           DueDate = DateTime.Parse("2018-04-13"),
+                           Priority = "Urgent"
                        },
 
                        new Task
                        {
                            TaskDescription = "Wash the Jeep",
-                           DueDate = DateTime.Parse("2018-04-28")
+                           DueDate = DateTime.Parse("2018-04-28"),
+                           Priority = "Critical"
                        },
 
                        new Task
                        {
                            TaskDescription = "Take the Trash Out",
-                           DueDate = DateTime.Parse("2018-05-25")
+                           DueDate = DateTime.Parse("2018-05-25"),
+                           Priority = "Not Critical"
                        }
                    );
                    context.SaveChanges();
