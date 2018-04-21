@@ -8,16 +8,14 @@ namespace TaskList.Models
         public int ID { get; set; }
         
         [StringLength(60, MinimumLength = 8)]
-        [Required]
+        [Display(Name = "Task Description")]
         public string TaskDescription { get; set; }
 
-        [Display(Name = "Due Date")]
-        [DataType(DataType.Date)]
+        [Display(Name = "Due Date"), DataType(DataType.Date)]
         public DateTime DueDate { get; set; }    
         
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
-        [StringLength(15)]
-        [Required]
+        [Required, StringLength(15)]
         public string Priority { get; set; }    
     }
 }
